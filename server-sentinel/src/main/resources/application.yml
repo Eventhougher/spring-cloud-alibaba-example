@@ -1,0 +1,22 @@
+server:
+  port: 9999
+
+spring:
+  application:
+    name: server-sentinel-client
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 112.74.42.138:8848
+    sentinel:
+      transport:
+        dashboard: 122.51.56.201:8720
+# httpurlconnection  没有对象池
+# httpclient  停止更新
+# OKhttp    get(url 成功回调  失败的回调)
+feign:
+  # 开启Sentinel对Feign的支持
+  sentinel:
+    enabled: true
+  okhttp:
+    enabled: true

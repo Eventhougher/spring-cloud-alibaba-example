@@ -1,0 +1,10 @@
+server:
+  port: 8092
+spring:
+  application:
+    name: server-feign
+  # ====注册中心配置信息=====
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 112.74.42.138:8848
